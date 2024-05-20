@@ -1,29 +1,23 @@
 ##  Nginx as Reverse Proxy
 
 ### Part-1: Configuring Nginx as reverse proxy
-
-**Step-0:** Install necessary packages or tools in Linux machine using following command
+	
+** Step-01:** Install necessary packages or tools in Linux machine using following command
 
     sudo apt update
-    sudo apt install cron
-    sudo systemctl enable cron
-	
-** Step-01:** Install Nginx on the machine
-
-    sudo  apt  update
-	  sudo  apt  install  nginx
+	  sudo apt install nginx
 
 ** Step-02:** Allow access to Nginx through firewall
 
-    sudo  ufw  allow  'Nginx HTTP'
+    sudo ufw allow 'Nginx HTTP'
 
 ** Step-03:** To check status run
 
-    sudo  systemctl  status  nginx
+    sudo systemctl status nginx
 
 ** Step-04:** # Create a custom configuration file
 
-    sudo  nano  /etc/nginx/sites-available/<configuration file name>
+    sudo nano /etc/nginx/sites-available/<configuration file name>
    
 ** Step-05:** Paste this on that configuration file
 
@@ -39,15 +33,15 @@
 
 ** Step-06:** Enable this configuration file by creating a link
 
-    sudo  ln  -s  /etc/nginx/sites-available/<config file name> /etc/nginx/sites-enabled/
+    sudo ln -s /etc/nginx/sites-available/<config file name> /etc/nginx/sites-enabled/
 
 ** Step-07:** To verify the configuration file run
 
-    sudo  nginx  -t
+    sudo nginx -t
    
 ** Step-08:** To verify the configuration file run
 
-    sudo  nginx  -s  reload
+    sudo nginx -s reload
 
 ### Part-2: Run the python server
 
