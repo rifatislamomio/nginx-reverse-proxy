@@ -9,10 +9,9 @@ sudo ufw allow 'Nginx HTTP'
 sudo systemctl status nginx
 
 # Create a custom configuration file
-sudo nano /etc/nginx/sites-available/<configuration file name>
+cd /etc/nginx/sites-available/<configuration file name>
 
-# Paste this on that configuration file
-#########################################
+echo "
 server {
     listen 80;
     listen [::]:80;
@@ -24,7 +23,7 @@ server {
         include proxy_params;
     }
 }
-#########################################
+" > <configuration file name>
 
 # Enable this configuration file by creating a link
 sudo ln -s /etc/nginx/sites-available/<configuration file name> /etc/nginx/sites-enabled/
