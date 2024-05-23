@@ -43,8 +43,9 @@
 
     sudo nginx -s reload
 
-### Part-2: Run the python server
+### Part-2: Run the server
 
+#### For Python Server
     # install pipenv  (if not already exists)
     pip install pipenv
     
@@ -56,3 +57,19 @@
     
     # run the application
     python main.py
+
+
+#### For Go Server
+	# install golang
+    sudo apt-get install golang
+    
+    # install dependencies
+    go install
+    
+    # build the application
+    go build main.go
+
+ 	# run the server
+  	./main
+    
+
