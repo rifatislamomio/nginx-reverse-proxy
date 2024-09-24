@@ -67,6 +67,7 @@
     go install
     
     # build the application
+
     go build main.go
 
  	# run the server
